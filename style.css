@@ -1,50 +1,363 @@
-* {
+/* ------------------------------------------------
+   Richard Kent — Personal Site
+   Palette: warm neutrals, deep charcoal, editorial serif
+   ------------------------------------------------ */
+
+/* Reset */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ---- Base ---- */
+html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Georgia", "Times New Roman", serif;
-    background-color: #faf9f7;
-    color: #2c2c2c;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 300;
+    background-color: #f8f6f3;
+    color: #2b2b2b;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
 }
 
-main {
-    max-width: 480px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.25rem;
+/* ---- Typography ---- */
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     font-weight: 400;
-    letter-spacing: 0.02em;
-    margin-bottom: 1.25rem;
     color: #1a1a1a;
 }
 
-.bio {
+h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: #3d3d3d;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: #2b2b2b;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+    color: #6b5b4e;
+}
+
+/* ---- Layout ---- */
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+}
+
+/* ---- Header / Nav ---- */
+.site-header {
+    padding: 2.5rem 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #1a1a1a;
+}
+
+.nav-name:hover {
+    color: #6b5b4e;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.25rem;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    padding-bottom: 2px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* ---- Hero ---- */
+.hero {
+    padding: 5rem 0 4rem;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #7a6e62;
+    letter-spacing: 0.04em;
+    margin-bottom: 2.5rem;
+}
+
+.hero-intro {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: #3d3d3d;
+    max-width: 580px;
+}
+
+/* ---- Divider ---- */
+.divider {
+    width: 48px;
+    height: 1px;
+    background-color: #d4cfc8;
+    margin: 0.5rem 0;
+}
+
+/* ---- Sections ---- */
+.about-preview,
+.interests,
+.contact {
+    padding: 3.5rem 0;
+}
+
+.about-preview p,
+.contact p {
     font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 580px;
+}
+
+/* ---- Text Link ---- */
+.text-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b5b4e;
+    border-bottom: 1px solid #c9bfb3;
+    padding-bottom: 2px;
+}
+
+.text-link:hover {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+/* ---- Focus Grid ---- */
+.focus-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.focus-item h3 {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: #7a6e62;
+    margin-bottom: 0.6rem;
+}
+
+.focus-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+}
+
+/* ---- Contact ---- */
+.contact-links {
+    margin-top: 1.75rem;
+}
+
+.contact-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6b5b4e;
+    border-bottom: 1px solid #c9bfb3;
+    padding-bottom: 3px;
+}
+
+.contact-link:hover {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+/* ---- About Page ---- */
+.page-header {
+    padding: 5rem 0 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+.about-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.about-content h2:first-of-type {
+    margin-top: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.lede {
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
+    color: #2b2b2b !important;
+    font-weight: 300;
+}
+
+.about-cta {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e4dfda;
+}
+
+/* ---- Writing ---- */
+.writing-intro {
+    padding-bottom: 3rem;
+}
+
+.writing-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.writing-entry {
+    padding: 2.5rem 0;
+    border-top: 1px solid #e4dfda;
+}
+
+.writing-entry time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+}
+
+.writing-entry h2 {
+    font-size: 1.35rem;
+    margin: 0.5rem 0 0.75rem;
+}
+
+.writing-entry h2 a {
+    color: #1a1a1a;
+    border-bottom: 1px solid transparent;
+}
+
+.writing-entry h2 a:hover {
+    color: #6b5b4e;
+    border-bottom-color: #c9bfb3;
+}
+
+.writing-entry p {
+    font-size: 1rem;
     line-height: 1.7;
     color: #555;
-    margin-bottom: 2rem;
 }
 
-nav a {
-    font-size: 0.9rem;
-    color: #888;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
+/* ---- Footer ---- */
+.site-footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid #e4dfda;
+    max-width: 680px;
+    margin: 0 auto;
 }
 
-nav a:hover {
-    color: #2c2c2c;
-    border-color: #2c2c2c;
+.site-footer p {
+    font-size: 0.8rem;
+    color: #999;
+    letter-spacing: 0.05em;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 640px) {
+    .focus-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+
+    .site-header {
+        padding: 1.75rem 1.25rem;
+    }
+
+    main {
+        padding: 0 1.25rem 4rem;
+    }
+
+    .hero {
+        padding: 3rem 0 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .about-preview,
+    .interests,
+    .contact {
+        padding: 2.5rem 0;
+    }
 }
