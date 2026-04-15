@@ -1,6 +1,7 @@
 /* ------------------------------------------------
    Richard Kent — Personal Site
-   Palette: warm neutrals, deep charcoal, editorial serif
+   Fonts: Barlow (name/headings), Lora (body), Inter (nav/ui)
+   Palette: warm neutrals, deep charcoal
    ------------------------------------------------ */
 
 /* Reset */
@@ -17,8 +18,8 @@ html {
 }
 
 body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-weight: 300;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-weight: 400;
     background-color: #f8f6f3;
     color: #2b2b2b;
     line-height: 1.75;
@@ -27,24 +28,24 @@ body {
 
 /* ---- Typography ---- */
 h1, h2, h3 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-    font-weight: 400;
+    font-family: "Barlow", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
     color: #1a1a1a;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     line-height: 1.15;
     letter-spacing: -0.01em;
 }
 
 h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -88,16 +89,26 @@ main {
     align-items: center;
 }
 
+/* Small caps name treatment */
 .nav-name {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
     color: #1a1a1a;
 }
 
 .nav-name:hover {
     color: #6b5b4e;
+}
+
+.nav-name .cap {
+    font-size: 1.15em;
+}
+
+.nav-name .sc {
+    font-size: 0.88em;
+    text-transform: uppercase;
 }
 
 .nav-links {
@@ -106,7 +117,8 @@ main {
 }
 
 .nav-links a {
-    font-size: 0.85rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.8rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -130,7 +142,8 @@ main {
 }
 
 .tagline {
-    font-size: 1.1rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
     font-weight: 400;
     color: #7a6e62;
     letter-spacing: 0.04em;
@@ -144,22 +157,11 @@ main {
     max-width: 580px;
 }
 
-/* ---- Divider ---- */
-.divider {
-    width: 48px;
-    height: 1px;
-    background-color: #d4cfc8;
-    margin: 0.5rem 0;
-}
-
 /* ---- Sections ---- */
-.about-preview,
-.interests,
 .contact {
-    padding: 3.5rem 0;
+    padding: 1rem 0;
 }
 
-.about-preview p,
 .contact p {
     font-size: 1.05rem;
     line-height: 1.8;
@@ -170,6 +172,7 @@ main {
 .text-link {
     display: inline-block;
     margin-top: 1.5rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
     color: #6b5b4e;
@@ -182,30 +185,6 @@ main {
     border-color: #1a1a1a;
 }
 
-/* ---- Focus Grid ---- */
-.focus-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 0.5rem;
-}
-
-.focus-item h3 {
-    font-family: "Inter", sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    color: #7a6e62;
-    margin-bottom: 0.6rem;
-}
-
-.focus-item p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #4a4a4a;
-}
-
 /* ---- Contact ---- */
 .contact-links {
     margin-top: 1.75rem;
@@ -213,6 +192,7 @@ main {
 
 .contact-link {
     display: inline-block;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #6b5b4e;
@@ -230,14 +210,9 @@ main {
     padding: 5rem 0 3rem;
 }
 
-.page-header h1 {
-    font-size: 2.5rem;
-}
-
 .about-content h2 {
     margin-top: 3rem;
     margin-bottom: 1rem;
-    font-size: 1.4rem;
 }
 
 .about-content h2:first-of-type {
@@ -250,16 +225,9 @@ main {
 }
 
 .lede {
-    font-size: 1.2rem !important;
-    line-height: 1.8 !important;
-    color: #2b2b2b !important;
-    font-weight: 300;
-}
-
-.about-cta {
-    margin-top: 3.5rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid #e4dfda;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2b2b2b;
 }
 
 /* ---- Writing ---- */
@@ -279,6 +247,7 @@ main {
 }
 
 .writing-entry time {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -317,19 +286,13 @@ main {
 }
 
 .site-footer p {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 0.8rem;
     color: #999;
     letter-spacing: 0.05em;
 }
 
 /* ---- Responsive ---- */
-@media (min-width: 640px) {
-    .focus-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
-    }
-}
-
 @media (max-width: 600px) {
     html {
         font-size: 16px;
@@ -348,15 +311,17 @@ main {
     }
 
     h1 {
-        font-size: 2.25rem;
+        font-size: 1.8rem;
+    }
+
+    .nav-name {
+        font-size: 1.15rem;
     }
 
     .nav-links {
         gap: 1.5rem;
     }
 
-    .about-preview,
-    .interests,
     .contact {
         padding: 2.5rem 0;
     }
