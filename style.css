@@ -5,14 +5,15 @@
 }
 
 body {
-    font-family: "Georgia", "Times New Roman", serif;
-    background-color: #faf9f7;
-    color: #2c2c2c;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    background-color: #f8f6f3;
+    color: #2b2b2b;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -20,31 +21,43 @@ main {
     text-align: center;
 }
 
-h1 {
-    font-size: 2.25rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    margin-bottom: 1.25rem;
+h1.name {
+    font-family: "Barlow", -apple-system, sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
     color: #1a1a1a;
+}
+
+h1.name .cap {
+    font-size: 1.15em;
+}
+
+h1.name .sc {
+    font-size: 0.88em;
+    text-transform: uppercase;
 }
 
 .bio {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #555;
+    color: #3d3d3d;
     margin-bottom: 2rem;
 }
 
 nav a {
-    font-size: 0.9rem;
-    color: #888;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #6b5b4e;
     text-decoration: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #c9bfb3;
     padding-bottom: 2px;
     transition: color 0.2s, border-color 0.2s;
 }
 
 nav a:hover {
-    color: #2c2c2c;
-    border-color: #2c2c2c;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
 }
